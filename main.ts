@@ -86,6 +86,9 @@ scene.onOverlapTile(SpriteKind.Projectile, assets.tile`myTile0`, function (sprit
     info.changeLifeBy(-1)
     sprites.destroy(football)
 })
+info.onLifeZero(function () {
+    game.gameOver(true)
+})
 let football: Sprite = null
 let Son: Sprite = null
 tiles.setCurrentTilemap(tilemap`level10`)
@@ -218,6 +221,7 @@ let Dad = sprites.create(img`
     . . . f f . . f f . . . . 
     `, SpriteKind.Parent)
 Dad.setPosition(77, 7)
+game.splash("Let's Throw the Football together!")
 game.onUpdateInterval(1500, function () {
     football = sprites.createProjectileFromSprite(img`
         . . c 6 . . 
