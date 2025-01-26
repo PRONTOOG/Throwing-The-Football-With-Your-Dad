@@ -1,5 +1,6 @@
 {
     "name": "Throwing the football with your dad",
+    "version": "0.0.1",
     "description": "",
     "dependencies": {
         "device": "*"
